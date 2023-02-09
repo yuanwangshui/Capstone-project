@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
+    tools:context=".activity.HomeActivity"
     android:orientation="vertical"
     android:background="#dbf6f6">
     <ProgressBar
@@ -14,6 +14,131 @@
         android:padding="150dp"
         android:visibility="gone"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gas"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="温湿度监测"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:typeface="monospace"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            />
+        <ToggleButton
+            android:id="@+id/tog_dht"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="110sp"
+            android:background="@android:color/transparent"
+            android:button="@drawable/switch_btn"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@xml/th_rect"
+                    android:gravity="center"
+                    android:text="温度(℃)"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:background="@xml/th_rect_mid"
+                    android:gravity="center_horizontal"
+                    android:text="当前温度为："
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:background="@xml/th_rect_bottom"
+                    android:gravity="center"
+                    android:text="28"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="23sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@xml/h_rect"
+                    android:gravity="center"
+                    android:text="湿度(%)"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:background="@xml/h_rect_mid"
+                    android:gravity="center_horizontal"
+                    android:text="当前湿度为："
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+                <TextView
+                    android:id="@+id/humidity"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:background="@xml/h_rect_bottom"
+                    android:gravity="center"
+                    android:text="28"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="23sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
