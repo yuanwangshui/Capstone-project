@@ -16,16 +16,46 @@
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         >
         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/logo"
+            />
+        <TextView
+            android:gravity="center"
+            android:text="欢迎回家"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/black" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/gas"
-            android:gravity="center"
             android:layout_marginStart="20dp"
-            />
+            android:gravity="center"
+            android:src="@drawable/sun" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -139,7 +169,14 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/black" />
     <LinearLayout
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -205,14 +242,15 @@
 
             />
     </LinearLayout>
+
     <Button
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"
-        />
+        android:layout_marginTop="0dp"
+        android:background="@color/black" />
+
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -286,13 +324,13 @@
 
 
     <Button
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black"
         />
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -357,7 +395,7 @@
 
 
     <Button
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black"

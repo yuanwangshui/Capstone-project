@@ -20,7 +20,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Home_Safer">
-        <activity android:name=".activity.HomeActivity" android:launchMode="singleTask" android:exported="true">
+        <activity android:name=".activity.MainActivity" android:launchMode="singleTask" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

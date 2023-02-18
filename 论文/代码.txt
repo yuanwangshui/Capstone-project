@@ -1,0 +1,129 @@
+<RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="136dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.695"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <LinearLayout
+                android:id="@+id/data_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+                <Button
+                    android:id="@+id/my_data_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button"
+                    android:gravity="center_vertical"
+                    android:paddingStart="50dp"
+                    android:stateListAnimator="@null"
+                    android:text="我的数据"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:src="@drawable/data" />
+
+            <ImageView
+                android:id="@+id/my_data_more"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/data_layout"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/more_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="390dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+            <LinearLayout
+                android:id="@+id/mode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="@drawable/button"
+                    android:gravity="center_vertical"
+                    android:paddingStart="50dp"
+                    android:stateListAnimator="@null"
+                    android:text="夜间模式"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:src="@drawable/moonlight" />
+
+            <Switch
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/mode_layout"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="392dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="312dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button"
+                    android:gravity="center_vertical"
+                    android:paddingStart="50dp"
+                    android:stateListAnimator="@null"
+                    android:text="设置"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:src="@drawable/set" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/setting_layout"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/more_arrow" />
+        </RelativeLayout>
