@@ -30,6 +30,12 @@
         <activity android:name=".activity.PersonActivity" android:exported="true" android:launchMode="singleTask">
 
         </activity>
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <service android:name="org.eclipse.paho.android.service.MqttService" />
     </application>
 

@@ -1,2 +1,3 @@
 rootProject.name = "Home_Safer"
 include ':app'
+include ':vitamio'
