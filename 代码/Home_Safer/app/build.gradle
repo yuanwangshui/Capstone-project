@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.home_safer"
-        minSdkVersion 17
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -31,6 +31,10 @@ android {
 dependencies {
     compile project(':vitamio')
 
+    implementation 'com.google.android.exoplayer:exoplayer:2.16.1'
+
+    implementation 'io.crossbar.autobahn:autobahn-android:21.7.1'
+    implementation "org.java-websocket:Java-WebSocket:1.5.1"
     implementation 'androidx.work:work-runtime:2.7.1'
     //mqtt所需依赖
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
