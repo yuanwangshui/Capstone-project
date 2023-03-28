@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:paddingTop="200dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingBottom="50dp"
+        android:src="@drawable/load"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:text="Home Safer"
+        android:id="@+id/load_name"
+        android:textStyle="normal"
+        android:textColor="#216D80"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        />
+
+</LinearLayout>

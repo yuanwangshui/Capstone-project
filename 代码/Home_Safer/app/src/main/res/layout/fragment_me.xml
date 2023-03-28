@@ -65,66 +65,69 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="391dp"
-            android:layout_height="575dp"
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="130dp"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="1dp"
-                    android:id="@+id/data_layout"
-                    >
-                    <Button
-                        android:text="我的数据"
-                        android:textSize="13sp"
-                        android:id="@+id/my_data_btn"
-                        android:textStyle="normal"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-                        android:paddingStart="50dp"
-                        android:stateListAnimator="@null"
-                        android:background="@drawable/button"
-                        />
-                </LinearLayout>
-                <ImageView
-                    android:layout_marginStart="10dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="10dp"
-                    android:src="@drawable/data"
-                    />
-                <ImageView
-                    android:id="@+id/my_data_more"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/more_arrow"
-                    android:layout_marginTop="0dp"
-                    android:layout_alignRight="@+id/data_layout"
-                    android:layout_marginEnd="20dp"
-                    />
-            </RelativeLayout>
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.048">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:layout_marginTop="30dp">
+
                 <LinearLayout
+                    android:id="@+id/data_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="1dp"
+                    android:padding="1dp">
+
+                    <Button
+                        android:id="@+id/my_data_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/button"
+                        android:gravity="center_vertical"
+                        android:paddingStart="50dp"
+                        android:stateListAnimator="@null"
+                        android:text="我的数据"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:src="@drawable/data" />
+
+                <ImageView
+                    android:id="@+id/my_data_more"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_alignRight="@+id/data_layout"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/more_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:id="@+id/mode_layout"
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
 
                     <Button
                         android:layout_width="match_parent"
@@ -136,13 +139,14 @@
                         android:text="夜间模式"
                         android:textSize="13sp" />
                 </LinearLayout>
+
                 <ImageView
-                    android:layout_marginStart="10dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
                     android:padding="10dp"
-                    android:src="@drawable/moonlight"
-                    />
+                    android:src="@drawable/moonlight" />
+
                 <Switch
                     android:layout_width="50dp"
                     android:layout_height="40dp"
@@ -150,44 +154,59 @@
                     android:layout_marginTop="0dp"
                     android:layout_marginEnd="18dp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
+
                 <LinearLayout
+                    android:id="@+id/setting_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="1dp"
-                    android:id="@+id/setting_layout"
-                    >
+                    android:padding="1dp">
+
                     <Button
-                        android:text="设置"
-                        android:textSize="13sp"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:background="@drawable/button"
                         android:gravity="center_vertical"
                         android:paddingStart="50dp"
                         android:stateListAnimator="@null"
-                        android:background="@drawable/button"
-                        />
+                        android:text="设置"
+                        android:textSize="13sp" />
                 </LinearLayout>
+
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:padding="10dp"
-                    android:src="@drawable/set"
                     android:layout_marginStart="10dp"
-                    />
+                    android:padding="10dp"
+                    android:src="@drawable/set" />
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/more_arrow"
-                    android:layout_marginTop="0dp"
                     android:layout_alignRight="@+id/setting_layout"
+                    android:layout_marginTop="0dp"
                     android:layout_marginEnd="20dp"
-                    />
+                    android:src="@drawable/more_arrow" />
             </RelativeLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/exit"
+            android:textColor="@color/cyan_500"
+            android:background="@color/cyan_500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="209dp"
+            android:text="退出登录"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

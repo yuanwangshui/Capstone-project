@@ -16,6 +16,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,9 +52,10 @@ import static com.example.home_safer.view.TunlView.getTime;
  * Use the {@link CameraFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CameraFragment extends Fragment {
+public class CameraFragment extends Fragment{
     private RecyclerView mRecycler;
     StyledPlayerView mVideoView;
+    Button button4;
 
     TextView textview;
     TunlView tunlView ;
@@ -61,7 +64,7 @@ public class CameraFragment extends Fragment {
     private String url9="http://172.27.2.94/live_hls/camera.m3u8";
     private String url10="http://219.151.31.38/liveplay-kk.rtxapp.com/live/program/live/hnwshd/4000000/mnf.m3u8";
     private String url=url9;
-    private String muri="192.168.226.15";
+    private String muri="172.27.226.184";
     public static final int REFRESH_TIMERTV = 1;
 
     List<TimeLineModel> models = new ArrayList<TimeLineModel>();
@@ -141,6 +144,13 @@ public class CameraFragment extends Fragment {
     private void init_view(View view)//初始化控件
     {
         tunlView = view.findViewById(R.id.tunlview);
+        button4=view.findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                get_rtmp();
+            }
+        });
     }
 
     private void init_listener()
@@ -174,7 +184,24 @@ public class CameraFragment extends Fragment {
         initRecycler();//初始化recyclerview
         wsc = new WebSocketConnection();
         connect();
+        get_rtmp();
         return view;
+    }
+    public void get_rtmp()
+    {
+        Log.e("button4444", "get_rtmp: ");
+        player = new ExoPlayer.Builder(getContext()).build();
+
+        mVideoView.setPlayer(player);
+        if(!player.isLoading())
+        {
+            //MediaItem mediaItem=MediaItem.fromUri("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+            //MediaItem mediaItem = MediaItem.fromUri("http://172.27.187.171/live_hls/camera.m3u8");
+            MediaItem mediaItem=MediaItem.fromUri(("http://"+muri+"/live_hls/test.m3u8"));
+            player.setMediaItem(mediaItem);
+            player.prepare();
+        }
+        player.play();
     }
 
     public void getNowTime(){
@@ -214,7 +241,7 @@ public class CameraFragment extends Fragment {
                             System.out.println("onMessage: " + message);
                             if(flag==0)
                             {
-                                temp_name=message.substring(1,message.length()-4);
+                                temp_name=message.substring(0,message.length()-4);
                                 flag=1;
                             }
                             else{
@@ -277,7 +304,7 @@ public class CameraFragment extends Fragment {
                 {
                     //MediaItem mediaItem=MediaItem.fromUri("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
                     //MediaItem mediaItem = MediaItem.fromUri("http://172.27.187.171/live_hls/camera.m3u8");
-                    MediaItem mediaItem=MediaItem.fromUri(("http://"+muri+"/live_hls/"+models.get(position).getName()+".m3u8"));
+                    MediaItem mediaItem=MediaItem.fromUri(("http://"+muri+"/live_hls/video"+models.get(position).getName()+".m3u8"));
                     player.setMediaItem(mediaItem);
                     player.prepare();
                 }
@@ -310,4 +337,5 @@ public class CameraFragment extends Fragment {
             }
         }
     };
+
 }

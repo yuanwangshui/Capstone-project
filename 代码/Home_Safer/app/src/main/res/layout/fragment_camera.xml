@@ -20,8 +20,8 @@
 
         <com.example.home_safer.view.TunlView
             android:id="@+id/tunlview"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_width="226dp"
+            android:layout_height="76dp"
             android:layout_marginBottom="232dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +38,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tunlview" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="19dp"
+            android:text="监控"
+            app:layout_constraintBottom_toTopOf="@+id/time_line_recycler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tunlview"
+            app:layout_constraintTop_toBottomOf="@+id/styledPlayerView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
